@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת של תובנות עסקיות</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #6b7280, #4b5563);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, #6b7280, #4b5563);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מערכת של תובנות עסקיות</h1>
+        <p>מערכת ויזואליזציה לקבלת החלטות מתאימות</p>
+    </header>
+
+    <div class="container">
+        <section id="purpose">
+            <h2>תכלית המערכת</h2>
+            <p>מערכת התובנות העסקיות נועדה לספק כלי ויזואלי מתקדם לעיבוד נתונים עסקיים, תוך מתן תובנות בזמן אמת. המערכת מאפשרת למקבלי החלטות לזהות מגמות, לנתח ביצועים ולקבל החלטות מבוססות נתונים בצורה יעילה וידידותית.</p>
+        </section>
+
+        <section id="goals">
+            <h2>מטרות המערכת</h2>
+            <p>המטרות המרכזיות של המערכת כוללות:</p>
+            <ul>
+                <li>הצגת נתונים מורכבים בצורה ויזואלית וברורה.</li>
+                <li>שיפור תהליכי קבלת החלטות באמצעות כלים אנליטיים מתקדמים.</li>
+                <li>מתן גישה נוחה ומהירה למידע עסקי קריטי.</li>
+                <li>אפשרות להתאמה אישית של ממשקים ודוחות בהתאם לצרכי המשתמש.</li>
+            </ul>
+        </section>
+
+        <section id="systems">
+            <h2>מערכות ניהול</h2>
+            <div class="buttons">
+                <a href="dash1.html" class="btn">מערכת ניהול 1</a>
+                <a href="dash2.html" class="btn">מערכת ניהול 2</a>
+                <a href="dash3.html" class="btn">מערכת ניהול 3</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 מערכת תובנות עסקיות. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation to buttons on click
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function () {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html> 
